@@ -1,0 +1,19 @@
+{
+  "name": "js-tasks",
+  "version": "1.0.0",
+  "homepage": "https://vmolchanov.github.io/js-tasks",
+  "description": "Задачки по js",
+  "scripts": {
+    "build": "sh build.sh",
+    "predeploy": "rm -rf node_modules/gh-pages/.cache && npm run build",
+    "deploy": " gh-pages -d build"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "uglifycss": "0.0.29"
+  },
+  "dependencies": {
+    "gh-pages": "^2.0.1",
+    "uglify-es": "^3.3.9"
+  }
+}
