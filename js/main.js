@@ -13,6 +13,7 @@ const max = window.data.length;
 
 introCountElement.textContent = max;
 input.max = max;
+input.value = localStorage.getItem('lastTask') || 1;
 
 inputContainer.addEventListener('click', (e) => {
     const target = e.target;
@@ -36,6 +37,7 @@ inputContainer.addEventListener('click', (e) => {
 });
 
 goButton.addEventListener('click', () => {
+    localStorage.setItem('lastTask', input.value);
     location.href = URL + window.data[input.value - 1];
 });
 
